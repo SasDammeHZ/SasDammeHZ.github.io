@@ -79,3 +79,19 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Dashboard Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: grey;
+}
