@@ -22,6 +22,10 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: rgb(250, 240, 202);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul li {
@@ -37,8 +41,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgb(244, 211, 94);
+    background-color:rgb(244, 211, 94);
     color: black;
+}
+
+.active {
+    background-color:  rgb(244, 211, 94); 
 }
 
 /* Layout Styles */
