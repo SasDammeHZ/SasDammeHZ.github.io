@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(244, 211, 94);
+    background-color: rgb(13, 59, 102);
 }
 
 header {
@@ -16,6 +16,13 @@ header {
     text-align: center;
 }
 
+body main {
+    background-color: rgb(250, 240, 202);
+    color: black;
+    width: 90%;
+}
+
+/* nav layout */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -41,12 +48,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color:rgb(244, 211, 94);
+    background-color: rgb(244, 211, 94);
     color: black;
 }
 
 .active {
-    background-color:  rgb(244, 211, 94); 
+    background-color: rgb(244, 211, 94);
 }
 
 /* Layout Styles */
@@ -54,13 +61,6 @@ nav ul li a:hover {
     display: flex;
     flex: 1;
     padding: 20px;
-}
-
-aside {
-    width: 20%;
-    background-color: rgb(250, 240, 202);
-    color: black;
-    padding: 15px;
 }
 
 main {
@@ -86,7 +86,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
@@ -94,4 +95,97 @@ th, td {
 
 th {
     background-color: grey;
+}
+
+.completed {
+    background-color: lightgreen;
+}
+
+.not-completed {
+    background-color: lightcoral;
+}
+
+/* Aside menu */
+aside {
+    width: 8%;
+    background-color: rgb(244, 211, 94);
+    color: black;
+    padding: 15px;
+}
+
+aside ul {
+    list-style-type: none;
+    /* removes the default bullet points from the list */
+    padding: 0;
+}
+
+aside ul li {
+    margin: 20px 0;
+    /* adds space between each list item */
+}
+
+aside ul li a {
+    text-decoration: none;
+    /* removes the underline from the links */
+    color: blue;
+    font-size: 14px;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+    /* adds underline on hover */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+/* Ensure the section-content uses flexbox layout */
+.section-content {
+    display: flex;
+    align-items: center;
+    /* Vertically align items in the center */
+    gap: 20px;
+    /* Space between text and image */
+    margin: 20px 0;
+    /* Space above and below the section */
+}
+
+/* Style for the text content to take up more space */
+.text-content {
+    flex: 2;
+    /* Takes up more space compared to the image */
+}
+
+/* Style for the image */
+.section-content img {
+    flex: 1;
+    /* Takes up less space */
+    max-width: 25%;
+    /* Ensure image fits within the container */
+    height: auto;
+    /* Maintain aspect ratio of the image */
+    border-radius: 10px;
+    /* Optional: Adds rounded corners */
+}
+
+/* EC progress-bar */
+.container {
+    margin-top: 20px;
+}
+
+.progress-bar-background {
+    width: 100%;
+    background-color: white;
+    border: 1px solid white;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: lightgreen;
+    width: 0%;
+    /* Initial width, will be updated manually */
 }
