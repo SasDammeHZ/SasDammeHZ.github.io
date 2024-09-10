@@ -14,6 +14,10 @@ header {
     color: white;
     padding: 15px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0; /* Prevent shrinking */
+    z-index: 1000; /* Ensure it's above other elements */
 }
 
 body main {
@@ -23,16 +27,15 @@ body main {
 }
 
 /* nav layout */
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgb(250, 240, 202);
-    position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000;
 }
 
 nav ul li {
@@ -155,6 +158,7 @@ aside ul li a:hover {
 .text-content {
     flex: 2;
     /* Takes up more space compared to the image */
+    font-size: 25px;
 }
 
 /* Style for the image */
