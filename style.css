@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: rgb(13, 59, 102);
+    overflow-x: hidden; /* Disables horizontalbar */
 }
 
 header {
@@ -26,8 +27,17 @@ body main {
     width: 90%;
 }
 
-/* nav layout */
+/* HZ Logo*/
+.logo {
+    width: 250px; 
+    height: auto; 
+    position: absolute;
+    top: 15px; 
+    left: 15px; 
+}
 
+
+/* navigation layout */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -36,6 +46,7 @@ nav ul {
     background-color: rgb(250, 240, 202);
     top: 0;
     width: 100%;
+    font-size: 20px;
 }
 
 nav ul li {
@@ -81,6 +92,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 20px;
 }
 
 /* Dashboard Styles */
@@ -113,6 +125,7 @@ aside {
     background-color: rgb(244, 211, 94);
     color: black;
     padding: 15px;
+    font-size: 20px;
 }
 
 aside ul {
@@ -124,6 +137,7 @@ aside ul {
 aside ul li {
     margin: 20px 0;
     /* adds space between each list item */
+    
 }
 
 aside ul li a {
@@ -135,7 +149,6 @@ aside ul li a {
 
 aside ul li a:hover {
     text-decoration: underline;
-    /* adds underline on hover */
 }
 
 .grid-container {
@@ -143,34 +156,31 @@ aside ul li a:hover {
     grid-template-columns: auto auto auto auto;
 }
 
-/* Ensure the section-content uses flexbox layout */
+/* Main section conent */
 .section-content {
     display: flex;
     align-items: center;
-    /* Vertically align items in the center */
     gap: 20px;
     /* Space between text and image */
     margin: 20px 0;
     /* Space above and below the section */
 }
 
-/* Style for the text content to take up more space */
 .text-content {
     flex: 2;
     /* Takes up more space compared to the image */
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* Style for the image */
 .section-content img {
     flex: 1;
-    /* Takes up less space */
     max-width: 25%;
     /* Ensure image fits within the container */
     height: auto;
     /* Maintain aspect ratio of the image */
     border-radius: 10px;
-    /* Optional: Adds rounded corners */
+    /* Adds rounded corners to the image */
 }
 
 /* EC progress-bar */
@@ -190,5 +200,5 @@ aside ul li a:hover {
     height: 100%;
     background-color: lightgreen;
     width: 0%;
-    /* Initial width, will be updated manually */
 }
+
