@@ -6,9 +6,6 @@
 --headerAndFooterColor: white;
 }
 
-
-
-
 /* General Styles */ 
 body {
     font-family: Arial, sans-serif;
@@ -164,25 +161,42 @@ aside ul li a:hover {
     grid-template-columns: auto auto auto auto;
 }
 
-/* Main section conent */
-.section-content {
+/* Main section content */
+.section-wrapper {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
+.section-content {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px;
+    height: auto;
+}
+
+.section-content img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.section-content img[src="Images/avatar.jpg"] {
+    max-width: 60%; 
+    height: auto; 
+}
+
+/* text-content */
 .text-content {
     flex: 2;
     font-size: 20px;
 }
 
-/* Style for the image */
-.section-content img {
-    flex: 1;
-    max-width: 20%;
-    height: auto;
-    border-radius: 10px;
+.text-content h2 {
+    margin: 0; 
 }
 
 /* EC progress-bar */
