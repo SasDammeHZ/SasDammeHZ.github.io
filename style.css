@@ -1,4 +1,15 @@
-/* General Styles */
+/* Colors */
+:root {
+--mainBackgroundColor: rgb(13, 59, 102);
+--mainPageBackgroundColor: rgb(250, 240, 202);
+--SecondaryColor: rgb(244, 211, 94);
+--headerAndFooterColor: white;
+}
+
+
+
+
+/* General Styles */ 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,23 +17,23 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(13, 59, 102);
-    overflow-x: hidden; /* Disables horizontalbar */
+    background-color: var(--mainBackgroundColor);
+    overflow-x: hidden; 
 }
 
 header {
-    background-color: rgb(13, 59, 102);
-    color: white;
+    background-color: var(--mainBackgroundColor);
+    color: var(--headerAndFooterColor);
     padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
-    flex-shrink: 0; /* Prevent shrinking */
-    z-index: 1000; /* Ensure it's above other elements */
+    flex-shrink: 0; 
+    z-index: 1000; 
 }
 
 body main {
-    background-color: rgb(250, 240, 202);
+    background-color: var(--mainPageBackgroundColor);
     color: black;
     width: 90%;
 }
@@ -43,7 +54,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(250, 240, 202);
+    background-color: var(--mainPageBackgroundColor);
     top: 0;
     width: 100%;
     font-size: 20px;
@@ -62,31 +73,31 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgb(244, 211, 94);
+    background-color: var(--SecondaryColor);
     color: black;
 }
 
 .active {
-    background-color: rgb(244, 211, 94);
+    background-color: var(--SecondaryColor);
 }
 
 /* Layout Styles */
 .content-wrapper {
     display: flex;
     flex: 1;
-    padding: 20px;
+    padding: 10px;  
 }
 
 main {
-    width: 80%;
-    padding: 15px;
+    width: 85%;
+    padding: 10px;
     background-color: white;
 }
 
 /* Footer Styles */
 footer {
-    background-color: rgb(13, 59, 102);
-    color: white;
+    background-color: var(--mainBackgroundColor);
+    color: var(--headerAndFooterColor);
     text-align: center;
     padding: 10px;
     position: relative;
@@ -122,27 +133,24 @@ th {
 /* Aside menu */
 aside {
     width: 8%;
-    background-color: rgb(244, 211, 94);
+    background-color: var(--SecondaryColor);
     color: black;
-    padding: 15px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 18px;
 }
 
 aside ul {
     list-style-type: none;
-    /* removes the default bullet points from the list */
     padding: 0;
 }
 
 aside ul li {
     margin: 20px 0;
-    /* adds space between each list item */
     
 }
 
 aside ul li a {
     text-decoration: none;
-    /* removes the underline from the links */
     color: blue;
     font-size: 14px;
 }
@@ -160,27 +168,21 @@ aside ul li a:hover {
 .section-content {
     display: flex;
     align-items: center;
-    gap: 20px;
-    /* Space between text and image */
-    margin: 20px 0;
-    /* Space above and below the section */
+    gap: 10px;
+    margin: 10px 0;
 }
 
 .text-content {
     flex: 2;
-    /* Takes up more space compared to the image */
     font-size: 20px;
 }
 
 /* Style for the image */
 .section-content img {
     flex: 1;
-    max-width: 25%;
-    /* Ensure image fits within the container */
+    max-width: 20%;
     height: auto;
-    /* Maintain aspect ratio of the image */
     border-radius: 10px;
-    /* Adds rounded corners to the image */
 }
 
 /* EC progress-bar */
@@ -202,3 +204,18 @@ aside ul li a:hover {
     width: 0%;
 }
 
+/* Style for the summary */
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+  
+/* Style for the details */
+details {
+    margin-bottom: 50px;
+}
+   
+details p {
+    margin-left:20px;
+}
